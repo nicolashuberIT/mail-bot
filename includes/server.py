@@ -7,8 +7,6 @@ def server_password():
     global password
     password = input("Enter mailserver password: \n -- input --> ");
 
-#connect to srdmz.08.kzo.ch-server
-
 def connect_server():
     global mailserver
 
