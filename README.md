@@ -27,7 +27,7 @@ How to use the program:
   * response_mail (determine a response mail adress)
   * sender_mail (enter a sender mail adress)
   * attachment_name (define the name of the attachments so they can be found. Make sure to name these XYZ_n (whilste n is a natural number, beginning at 1 and growing to infinity) Keep in mind, that there must be an attachment for every list item in the csv.)
-5) Also setup a costum message! To do this, open includes/mailing.py and check line 44. There you can enter a custom message. Youse f'string in order to print individual messages.
+5) Also setup a custom message! To do this, open includes/mailing.py and check line 44. There you can enter a custom message. Youse f'string in order to print individual messages.
 
 To run the programm, there are two possibilities:
 1) setup an venviv to run main.py as standard
