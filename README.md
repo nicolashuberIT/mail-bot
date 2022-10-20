@@ -29,8 +29,8 @@ How to use the program:
   * attachment_name (define the name of the attachments so they can be found. Make sure to name these XYZ_n (whilste n is a natural number, beginning at 1 and growing to infinity) Keep in mind, that there must be an attachment for every list item in the csv.)
 5) Also setup a custom message! To do this, open includes/mailing.py and check line 44. There you can enter a custom message. Youse f'string in order to print individual messages.
 
-To run the programm, there are two possibilities:
-1) setup aa venviv to run main.py as standard
+To run the programm there are two possibilities:
+1) setup a venviv to run main.py as standard
 2) run main.py
 
 As a final step to initialize the mailing process you're asked to setup the server after having started the main.py script.
