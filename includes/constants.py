@@ -7,8 +7,8 @@ event_info = "https://www.sorg.kzo.ch/volleynight-2022"; #enter link to event pa
 
 #initialisation
 
-admin_key = "sokzo";
-program_key = "start";
+admin_key = "sokzo"; #enter admin key here
+program_key = "start"; #enter start command here
 root = "/Users/nicolas/PycharmProjects/so-kzo/mail-bot" #enter project root here
 
 #mailing
