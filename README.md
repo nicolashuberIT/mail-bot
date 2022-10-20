@@ -30,7 +30,7 @@ How to use the program:
 5) Also setup a custom message! To do this, open includes/mailing.py and check line 44. There you can enter a custom message. Youse f'string in order to print individual messages.
 
 To run the programm, there are two possibilities:
-1) setup an venviv to run main.py as standard
+1) setup aa venviv to run main.py as standard
 2) run main.py
 
 As a final step to initialize the mailing process you're asked to setup the server after having started the main.py script.
