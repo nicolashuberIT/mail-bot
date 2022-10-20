@@ -24,7 +24,7 @@ def server_setup():
 def server_password():
 
     global password
-    password = input("Enter mailserver password: \n -- input --> ");
+    password = input("Enter mail server password: \n -- input --> ");
 
 # --- server connection ---
 
