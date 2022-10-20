@@ -11,7 +11,7 @@ This python application was developped with a rather simple user experience in m
 
 First of all: never post critical information in the source code itself. For example, password strings etc. could be inputted in command line interactions!
 
-How to use the programm:
+How to use the program:
 1) download the most recently published code as .zip
 2) Install Python IDE like Pycharm or Visual Studio Code and setup project, which is simple as the provided folder is preconfigured in the correct manner.
 3) setup virtual environment in order to run the program. Make sure you chose the main.py document as the primary program.
