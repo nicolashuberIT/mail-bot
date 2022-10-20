@@ -1,6 +1,6 @@
 # mail-bot
  
-automated mailings (html, attachments, tls connection)
+automated mailings (attachments, tls connection)
 
 essential directories
 * attachments/
