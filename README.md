@@ -9,7 +9,7 @@ essential directories
 
 This python application was developped with a rather simple user experience in mind. To use the mail-bot you only need need basic programming skills and can just follow this guide.
 
-First of all: never post the critical information in the source code itself. For example, password strings etc. could be inputted in command line interactions!
+First of all: never post critical information in the source code itself. For example, password strings etc. could be inputted in command line interactions!
 
 How to use the programm:
 1) download the most recently published code as .zip
