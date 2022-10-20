@@ -33,4 +33,6 @@ To run the programm, there are two possibilities:
 1) setup an venviv to run main.py as standard
 2) run main.py
 
+As a final step to initialize the mailing process you're asked to setup the server after having started the main.py script.
+
 A lot of issues that you may encounter when using this program can be solved with stackoverflow or github. Good luck! :-)
