@@ -1,4 +1,8 @@
+# --- header files ---
+
 import includes.constants
+
+# --- admin password ---
 
 def admin_password():
     admin_password = input("Please enter the admin password to run the mailing program! \n -- input --> ")
@@ -9,6 +13,8 @@ def admin_password():
     else:
         print("-- output --> Wrong user key! The program was quit unexpectedly... \n");
         exit();
+
+# --- execute program ---
 
 def execute_program():
     programm_start = input("Enter 'start' the run the mailing program! \n -- input --> " );

@@ -1,12 +1,15 @@
+# --- header files ---
+
 from includes import server, constants, contacts
 from email.utils import formatdate
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from email.mime.application import MIMEApplication
 from email.mime.base import MIMEBase
-import os
 from email import encoders
 from pathlib import Path
+import os
+
+# --- final check / final command to start mailing ---
 
 def final_check():
     print("-- output --> mailing overview");
@@ -27,7 +30,7 @@ def final_check():
         server.mailserver.quit()
         exit()
 
-print("Mailing process ongoing...");
+# --- mailing ---
 
 def send():
 

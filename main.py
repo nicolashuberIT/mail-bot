@@ -1,4 +1,4 @@
-#header files
+# --- header files ---
 
 import includes.initialisation
 import includes.server
@@ -18,13 +18,14 @@ print("<------- END: INITIALISATION PROCESS ------>");
 
 print("<------- START: CONNECTION TO MAIL SERVER ------> \n");
 
+includes.server.server_setup()
 includes.server.server_password();
 includes.server.connect_server();
 includes.server.print_serverstatus();
 
 print("<------- END: CONNECTION TO MAIL SERVER ------>");
 
-#contacts
+# --- importing contacts ---
 
 print("<------- START: IMPORTING CONTACTS ------> \n");
 
@@ -32,7 +33,7 @@ includes.contacts.main();
 
 print("\n<------- END: IMPORTING CONTACTS ------>");
 
-#mailing
+# --- mailing process ---
 
 print("<------- START: MAILING PROCESS ------> \n");
 
@@ -40,6 +41,8 @@ includes.mailing.final_check();
 includes.mailing.send();
 
 print("<------- END: MAILING PROCESS ------>\n");
+
+# --- termination ---
 
 print("Congrats! The mailing has been completed. :-D");
 
