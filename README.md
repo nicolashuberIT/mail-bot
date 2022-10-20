@@ -2,12 +2,13 @@
  
 automated mailings (html, attachments, tls connection)
 
-directories
+essential directories
 * attachments/
 * contacts/
 * includes/
-* venv/
 
-Make sure to import .py-files as follows (e.g.): from includes import contacts
+This python application was developped with a rather simple user experience in mind. To use the mail-bot you don't need any programming skills and can just follow this guide.
 
-Never post the server information in the source code itself. For example, critical strings etc. could be inputted in command line applications!
+First of all: never post the critical information in the source code itself. For example, password strings etc. could be inputted in command line interactions!
+
+
