@@ -16,5 +16,5 @@ root = "/Users/nicolas/PycharmProjects/so-kzo/mail-bot" #enter project root here
 response_mail = "so@kzo.ch"; #enter response mail here
 sender_mail = "payment-so@kzo.ch"; #enter sender mail here
 attachment_name = 'HOW-TO-READ' #enter attachment name here
-courtesy = 0;
+courtesy = 0; #0 = non-courtesy form, 1 = courtesy form
 
