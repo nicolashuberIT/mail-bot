@@ -56,7 +56,7 @@ def send():
         msg['From'] = constants.sender_mail;
         msg['Date'] = formatdate(localtime=True);
         msg['To'] = contacts.mailbox[i];
-        msg['CC'] = constants.mail_systemProtocol;
+        msg['Cc'] = constants.mail_systemProtocol;
         msg.attach(MIMEText(message))
 
         attachmentPath = rf'{constants.root}/attachments/{constants.attachment_name}_{i+1}.pdf'
