@@ -40,7 +40,17 @@ print("<------- START: MAILING PROCESS ------> \n");
 includes.mailing.final_check();
 includes.mailing.send();
 
-print("<------- END: MAILING PROCESS ------>\n");
+print("<------- END: MAILING PROCESS ------>");
+
+# --- system protocol ---
+
+print("<------- START: SYSTEM PROTOCOL ------>\n");
+
+includes.mailing.generateProtocol();
+includes.mailing.sendProtocol();
+includes.mailing.quitServer(includes.server.mailserver);
+
+print("<------- END: SYSTEM PROTOCOL ------>\n");
 
 # --- termination ---
 

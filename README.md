@@ -7,7 +7,7 @@ essential directories
 * contacts/
 * includes/
 
-This python application was developped with a rather simple user experience in mind. To use the mail-bot you only need need basic programming skills and can just follow this guide.
+This python application was developed with a rather simple user experience in mind. To use the mail-bot you only need need basic programming skills and can just follow this guide.
 
 First of all: never post critical information in the source code itself. For example, password strings etc. could be inputted in command line interactions!
 
