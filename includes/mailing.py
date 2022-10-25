@@ -90,8 +90,7 @@ def send():
             print(f'------ error {str(e)}: --> {timestamp}: mail could not be sent to {contacts.mailbox[i]} and the following contacts as the attachment "{constants.attachment_name}_{i + 1}.pdf" could not be found. Please rerun the programm manually.');
 
             if str(e) == f"[Errno 2] No such file or directory: '{attachmentPath}'":
-                print(f'------ error: --> mail could not be sent to {contacts.mailbox[i]} and the following contacts as the attachment "{constants.attachment_name}_{i + 1}.pdf" could not be found. Please rerun the programm manually.');
-                f.write(f"error: {timestamp}, {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]},{filename} \n");
+                f.write(f"error: {timestamp}, {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]},{filename} \nerror: following contacts \n");
                 f.close();
 
                 timestamp_e = includes.mailing.timestamp();
@@ -105,12 +104,12 @@ def send():
         try:
             message_final = msg.as_string();
             server.mailserver.sendmail(constants.sender_mail, rcpt, message_final);
-            f.write(f"Success: {timestamp}, {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]}!, {filename}\n");
+            f.write(f"Success: {timestamp}, {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]}, {filename}\n");
             print(f'------ email sent to (mail, captain, team, status): --> {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]}, successful');
 
         except Exception as error:
             print(f'------ error {str(error)}: --> {timestamp}: mail could not be sent to {contacts.mailbox[i]} and the following contacts as the attachment "{constants.attachment_name}_{i + 1}.pdf" could not be found. Please rerun the programm manually.');
-            f.write(f"error: {timestamp}, {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]},{filename} \n");
+            f.write(f"error: {timestamp}, {contacts.mailbox[i]}, {contacts.name[i]} {contacts.surname[i]}, Team {contacts.team[i]},{filename} \nerror: following contacts \n");
             f.close();
 
             timestamp_e = includes.mailing.timestamp();
@@ -130,11 +129,16 @@ def generateProtocol(timestamp):
     pdf = FPDF();
     pdf.add_page();
 
+    pdf.set_font("Helvetica", f"", 12);
+    pdf.cell(200, 10, f'Systemprotokoll {timestamp} | Mailing: {constants.event} | SO KZO', ln=1);
+
     f = open(rf'{constants.root}/system/txt/systemLog.txt', "r");
 
     for x in f:
         pdf.set_font("Helvetica", "", 6);
-        pdf.cell(200, 30, txt=x);
+        pdf.cell(220, 10, txt=x);
+
+
 
     pdf.output(rf'{constants.root}/system/pdf/{timestamp}_{constants.attachment_systemProtocol}.pdf');
 
@@ -142,10 +146,10 @@ def generateProtocol(timestamp):
 
 def sendProtocol(timestamp):
 
-    message = f"Hallo! \n\n Es handelt sich hierbei um ein automatisch erstelltes Systemprotokoll, das zur Kontrolle des vorangehenden Mailings dient. \n\n Angaben zum Mailing: \n- Datum: {formatdate(localtime=True)} \n - Event: {constants.event} \n\n Zur Nachverfolgung dieser Nachricht: \n - UNIC-Timestamp: {timestamp} \n\n Im Anhang findet sich daher: \n {timestamp}_'{constants.attachment_systemProtocol} \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch";
+    message = f"Hallo! \n\n Es handelt sich hierbei um ein automatisch erstelltes Systemprotokoll, das zur Kontrolle des vorangehenden Mailings dient. \n\n Angaben zum Mailing: \n- Datum: {formatdate(localtime=True)} \n - Event: {constants.event} \n\n Zur Nachverfolgung dieser Nachricht: \n - UNIX-Timestamp: {timestamp} \n\n Im Anhang findet sich daher: \n {timestamp}_'{constants.attachment_systemProtocol} \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch";
 
     msg = MIMEMultipart();
-    msg['Subject'] = f'Systemprotokoll {timestamp}| Mailing: {constants.event} | SO KZO';
+    msg['Subject'] = f'Systemprotokoll {timestamp} | Mailing: {constants.event} | SO KZO';
     msg['From'] = constants.sender_mail;
     msg['Date'] = formatdate(localtime=True);
     msg['To'] = constants.mail_systemProtocol;
@@ -174,7 +178,7 @@ def sendProtocol(timestamp):
 
     message_final = msg.as_string();
     server.mailserver.sendmail(constants.sender_mail, constants.mail_systemProtocol, message_final);
-    print(f'-- output --> protocol sent to (mail, status): {timestamp}_{constants.mail_systemProtocol}, successful');
+    print(f'-- output --> protocol sent to (mail, status): {timestamp}, {constants.mail_systemProtocol}, successful');
 
 def quitServer(mailserver):
     mailserver.quit()

@@ -14,7 +14,7 @@ root = "/Users/nicolas/PycharmProjects/so-kzo/mail-bot" #enter project root here
 #mailing
 
 mail_CC = "";
-mail_BCC = ""
+mail_BCC = "https://testmail.app/console#:~:text=c6sx9.test%40inbox.testmail.app"
 
 response_mail = "so@kzo.ch"; #enter response mail here
 sender_mail = "payment-so@kzo.ch"; #enter sender mail here
