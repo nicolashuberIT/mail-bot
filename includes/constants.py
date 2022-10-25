@@ -13,9 +13,12 @@ root = "/Users/nicolas/PycharmProjects/so-kzo/mail-bot" #enter project root here
 
 #mailing
 
+mail_CC = "";
+mail_BCC = ""
+
 response_mail = "so@kzo.ch"; #enter response mail here
 sender_mail = "payment-so@kzo.ch"; #enter sender mail here
-attachment_name = '20221028_Rechnung Volleynight 2022' #enter attachment name here
+attachment_name = '20221026_Rechnung Volleynight 2022' #enter attachment name here
 courtesy = 0;
 
 #system protocol
