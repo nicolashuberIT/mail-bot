@@ -21,6 +21,7 @@ def final_check():
     print(f'------ event: --> {constants.event}');
     print(f'------ event info: --> {constants.event_info}');
     print(f'------ sender mail: --> {constants.sender_mail}');
+    print(f'------ copy to: --> {constants.mail_BCC}');
     print(f'------ response mail: --> {constants.response_mail}');
     print(f'------ attachments: --> "{constants.attachment_name}_i.pdf"');
     print(f'------ courtesy: --> {constants.courtesy}\n')
@@ -59,10 +60,10 @@ def send():
         timestamp = formatdate(localtime=True);
 
         if constants.courtesy == 0:
-            message = f'Hallo {contacts.name[i]}! \n\n Die Volleynight naht! Weil du dich bei der Anmeldung als Captain registriert hast, senden wir dir im Anhang die Rechnung deines Teams. Wir bitten dich, diese der Einfachheit zuliebe baldmöglichst zu begleichen, wobei dennoch eine Zahlungsfrist von 10 Tagen gilt. \n\n Zur Kontrolle deine Captain-Angaben: \n - Vorname, Name: {contacts.name[i]} {contacts.surname[i]} \n - E-Mail: {contacts.mailbox[i]} \n - Team: {contacts.team[i]} \n\n Im Anhang findest du: \n - "{constants.attachment_name}_{i + 1}.pdf" \n\n Zur Nachverfolgung dieser Nachricht: \n - Timestamp: {timestamp} \n\n Solltest du einen Fehler feststellen, wendest du dich bitte per Mail an {constants.response_mail}. Beachte auch, dass diese E-Mail automatisiert mit einem Python-Skript versendet wurde. Reaktionen an {constants.sender_mail} können daher nicht beantwortet werden. \n\n In den nächsten Tagen werden automatisiert Tickets mit QR-Code und Besucher-ID erstellt und an jeden/jede Teilnehmer/-in individuell versendet. \n\n Ausführliche Informationen zum Event finden sich weiterhin auf unserer Website unter {constants.event_info}. Gerne geben wir dir bei individuellen Fragen auch per E-Mail Auskunft. \n\n Wir freuen uns auf eine tolle Volleynight und bedanken uns für die Unterstützung bei der Abwicklung der Zahlung. \n\n Herzliche Grüsse \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
+            message = f'Hallo! \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
 
         else:
-            message = f'Hallo {contacts.name[i]} {contacts.surname[i]}! \n\n Die Volleynight naht! Weil Sie sich bei der Anmeldung als Captain registriert haben, senden wir Ihnen im Anhang die Rechnung Ihres Teams. Wir bitten Sie, diese baldmöglichst zu begleichen. Selbstverständlich gilt dennoch eine Zahlungsfrist von 10 Tagen, weshalb der Zahlungsvorgang von der Teilnahme an der Volleynight entkoppelt ist. \n\n Zur Kontrolle Ihre Captain-Angaben: \n - Vorname, Name: {contacts.name[i]} {contacts.surname[i]} \n - E-Mail: {contacts.mailbox[i]} \n - Team: {contacts.team[i]} \n\n Im Anhang finden Sie: \n - "{constants.attachment_name}_{i + 1}.pdf" \n\n Zur Nachverfolgung dieser Nachricht: \n - Timestamp: {timestamp} \n\n Sollten Sie einen Fehler feststellen, wenden Sie sich bitte per Mail an {constants.response_mail}. Beachten Sie auch, dass diese E-Mail automatisiert mit einem Python-Skript versendet wurde. Reaktionen an {constants.sender_mail} können daher nicht beantwortet werden. \n\n In den nächsten Tagen werden automatisiert Tickets mit QR-Code und Besucher-ID erstellt und an jeden/jede Teilnehmer/-in individuell versendet. \n\n Ausführliche Informationen zum Event finden sich weiterhin auf unserer Website unter {constants.event_info}. Gerne geben wir Ihnen bei individuellen Fragen auch per E-Mail Auskunft. \n\n Wir freuen uns auf eine tolle Volleynight und bedanken uns für die Unterstützung bei der Abwicklung der Zahlung. \n\n Herzliche Grüsse \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
+            message = f'Hallo! \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
 
         msg = MIMEMultipart();
         msg['Subject'] = f'{constants.event} | Team {contacts.team[i]} | SO KZO';

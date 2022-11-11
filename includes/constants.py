@@ -2,26 +2,26 @@
 
 #event
 
-event = "Rechnung Volleynight 2022"; #enter mail subject here
-event_info = "https://www.sorg.kzo.ch/volleynight-2022"; #enter link to event page here
+event = "Event"; #enter mail subject here
+event_info = "www.nicolas-paragliding.com"; #enter link to event page here
 
 #initialisation
 
-admin_key = "sokzo"; #enter admin key here
+admin_key = "password"; #enter admin key here
 program_key = "start"; #enter start command here
 root = "/Users/nicolas/PycharmProjects/so-kzo/mail-bot" #enter project root here
 
 #mailing
 
 mail_CC = "";
-mail_BCC = "https://testmail.app/console#:~:text=c6sx9.test%40inbox.testmail.app"
+mail_BCC = "";
 
 response_mail = "so@kzo.ch"; #enter response mail here
-sender_mail = "payment-so@kzo.ch"; #enter sender mail here
-attachment_name = '20221026_Rechnung Volleynight 2022' #enter attachment name here
-courtesy = 0;
+sender_mail = ""; #enter sender mail here
+attachment_name = "" #enter attachment name here
+courtesy = 1;
 
 #system protocol
 
-mail_systemProtocol = "so@kzo.ch";
+mail_systemProtocol = "";
 attachment_systemProtocol = f"Systemprotokoll_Mailing-({event})_SO-KZO";
