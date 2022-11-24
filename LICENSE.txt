@@ -8,7 +8,7 @@ Last updated: 24.11.2022
 
 ## 2) Basics
 
-This agreement covers the access and use of the source code for the following software, hereafter known as _COWS - The Clever Collapse Warning System_.
+This agreement covers the access and use of the source code for the following software, hereafter known as _mail-bot_.
 
 In consideration of the above, the licensee agrees to respect the following terms and conditions. The licensee undertakes to show respect for Nicolas Huber's intellectual property and to use it only in accordance with his instructions. Thank you!
 
@@ -80,6 +80,4 @@ Based on: https://www.pandadoc.com/source-code-license-agreement-template/ [24.1
 
 ------
 
-© Nicolas Huber |
-nicolas.paragliding@bluewin.ch |
-www.nicolas-paragliding.com
+© Nicolas Huber
