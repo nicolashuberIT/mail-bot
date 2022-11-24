@@ -46,13 +46,16 @@ print("<------- END: MAILING PROCESS ------>");
 
 print("<------- START: SYSTEM PROTOCOL ------>\n");
 
-timestamp = includes.mailing.timestamp();
-includes.mailing.generateProtocol(timestamp);
-includes.mailing.sendProtocol(timestamp);
-includes.mailing.quitServer(includes.server.mailserver);
+includes.mailing.sendProtocol();
 
-print("<------- END: SYSTEM PROTOCOL ------>\n");
+print("\n<------- END: SYSTEM PROTOCOL ------>");
 
 # --- termination ---
+
+print("<------- START: SERVER TERMINATION ------>\n");
+
+includes.mailing.quitServer(includes.server.mailserver);
+
+print("<------- END: SERVER TERMINATION ------> \n");
 
 print("Congrats! The mailing has been completed. :-D");
