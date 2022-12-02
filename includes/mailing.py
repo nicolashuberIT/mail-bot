@@ -63,7 +63,7 @@ def send():
         timestamp_mailing = formatdate(localtime=True);
 
         if constants.courtesy == 0:
-            message = f'Hallo {contacts.name[i]} \n\n Schön, dass du dich für den Skitag 2023 angemeldet hast! Wir freuen uns über deine Teilnahme. :-) \n\n Zur Kontrolle deine Kontaktangaben: \n - Vorname, Name: {contacts.name[i]} {contacts.surname[i]} \n - E-Mail: {contacts.mailbox[i]} \n - Kategorie: {contacts.team[i]} \n\n Wenn du einen Fehler feststellst, bitten wir dich um eine rasche Benachrichtigung, sodass wir diesen beheben können. \n\n Zur Nachverfolgung dieser Nachricht: \n -Timestamp: {timestamp_mailing} \n\n Gerne senden wir dir im Anhang deine personalisierte Rechnung ("{constants.attachment_name}_{i+1}.pdf"). Wir bitten dich, diese baldmöglichst zu begleichen. \n\n Bitte beachte, dass diese Nachricht automatisiert durch ein Python-Skript verschickt wurde. Reaktionen an {constants.sender_mail} können daher nicht beantwortet werden. Ausführliche Informationen zum Event finden sich weiterhin unter {constants.event_info}. Gerne sind wir für individuelle Fragen erreichbar. Du erreichst uns jederzeit unter {constants.response_mail}. \n\n Bis bald im Schnee! \n\n Herzliche Grüsse \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
+            message = f'Hallo {contacts.name[i]} \n\n Schön, dass du dich für den Skitag 2023 angemeldet hast! Wir freuen uns über deine Teilnahme. :-) \n\n Zur Kontrolle deine Kontaktangaben: \n - Vorname, Name: {contacts.name[i]} {contacts.surname[i]} \n - E-Mail: {contacts.mailbox[i]} \n - Kategorie: {contacts.team[i]} \n\n Wenn du einen Fehler feststellst, bitten wir dich um eine rasche Benachrichtigung, sodass wir diesen beheben können. \n\n Zur Nachverfolgung dieser Nachricht: \n -Timestamp: {timestamp_mailing} \n\n Gerne senden wir dir im Anhang deine personalisierte Rechnung ("{constants.attachment_name}_{i+1}.pdf"). Wir bitten dich, diese baldmöglichst zu begleichen. \n\n Bitte beachte, dass diese Nachricht automatisiert durch ein Python-Programm verschickt wurde. Reaktionen an {constants.sender_mail} können daher nicht beantwortet werden. Ausführliche Informationen zum Event finden sich weiterhin unter {constants.event_info}. Gerne sind wir für individuelle Fragen erreichbar. Du erreichst uns jederzeit unter {constants.response_mail}. \n\n Bis bald im Schnee! \n\n Herzliche Grüsse \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
 
         else:
             message = f'Hallo! \n SO KZO \n\n _____________________________ \n Kantonsschule Zürcher Oberland \n\n SO KZO \n so@kzo.ch \n https://www.sorg.kzo.ch';
@@ -178,11 +178,9 @@ def generateProtocol(timestamp):
     pdf.set_font("Helvetica", f"", 12);
     pdf.cell(200, 10, f'Systemprotokoll {timestamp} | Mailing: {constants.event} | SO KZO', ln=1);
 
-    for i in range(0, 1, 1) in f:
+    for i in range(0, limit, 1) in f:
             pdf.set_font("Helvetica", "", 6);
             pdf.cell(220+10*i, 10, pdf_array[i]);
-
-    # f = open(rf'{constants.root}/system/txt/{timestamp}_systemLog.txt', "r");
 
     f.close();
 
