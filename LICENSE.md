@@ -2,6 +2,12 @@
 
 _This source code license is by and between Nicolas Huber (software provider) and licensee._
 
+---
+
+_mail-bot_ | **© Nicolas Huber** | 2022
+
+---
+
 ## 1) Version
 
 Last updated: 24.11.2022
