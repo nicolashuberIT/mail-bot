@@ -1,0 +1,5 @@
+msg: index, timestamp, email, name surname, category 
+error: 0, Sat, 31 Dec 2022 12:00:36 +0100, nicolas.huber@studmail.kzo.ch, Nicolas Huber, Gleitschirm,test.pdf_1.pdf 
+error: following contacts 
+
+the following error occured: [Errno 2] No such file or directory: '/Users/nicolas/PycharmProjects/so-kzo/mail-bot/attachments/test.pdf_1.pdf' 

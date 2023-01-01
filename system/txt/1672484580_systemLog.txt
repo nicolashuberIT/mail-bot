@@ -1,0 +1,1 @@
+msg: index, timestamp, email, name surname, category 

@@ -1,0 +1,2 @@
+msg: index, timestamp, email, name surname, category 
+Success: 0, Sat, 31 Dec 2022 12:04:29 +0100, nicolas.huber@studmail.kzo.ch, Nicolas Huber, Gleitschirm, test_1.pdf

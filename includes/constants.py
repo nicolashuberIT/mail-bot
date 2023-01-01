@@ -2,8 +2,8 @@
 
 #event
 
-event = ""; #enter mail subject here
-event_info = ""; #enter link to event page here
+event = "Skitag 2023"; #enter mail subject here
+event_info = "https://www.sorg.kzo.ch/skitag2022"; #enter link to event page here
 
 #initialisation
 
@@ -17,7 +17,7 @@ mail_CC = "";
 mail_BCC = "";
 
 response_mail = "so@kzo.ch"; #enter response mail here
-sender_mail = ""; #enter sender mail here
+sender_mail = "payment-so@kzo.ch"; #enter sender mail here
 attachment_name = "" #enter attachment name here
 courtesy = 0;
 

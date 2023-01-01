@@ -36,7 +36,7 @@ def connect_server():
 
     mailserver = smtplib.SMTP(server,port);
     mailserver.ehlo();
-    mailserver.starttls(context=context)
+    mailserver.starttls()
     mailserver.ehlo();
     mailserver.login(login, password);
 

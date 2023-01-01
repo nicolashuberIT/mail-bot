@@ -1,0 +1,4 @@
+msg: index, timestamp, email, name surname, category 
+Success: 0, Sun, 01 Jan 2023 12:05:05 +0100, nicolas.huber@studmail.kzo.ch, Nicolas Huber, Gleitschirm, test_1.pdf
+Success: 1, Sun, 01 Jan 2023 12:05:06 +0100, nicolas.huber@studmail.kzo.ch, Nicolas Huber, Ski, test_2.pdf
+Success: 2, Sun, 01 Jan 2023 12:05:06 +0100, nicolas.huber@studmail.kzo.ch, Nicolas Huber, Snowboard, test_3.pdf
